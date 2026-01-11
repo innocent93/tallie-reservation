@@ -1,0 +1,5 @@
+
+
+MONGO_URI=mongodb://localhost:27017/restaurant-reservation
+REDIS_URL=redis://redis:6379
+JWT_SECRET=supersecret
