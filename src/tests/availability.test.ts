@@ -1,3 +1,7 @@
+jest.setTimeout(30000); // 30 seconds
+
+import dotenv from "dotenv";
+dotenv.config();
 import request from "supertest";
 import app from "../app"; // removed /src since tests usually sit in src/tests
 import mongoose from "mongoose";

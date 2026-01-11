@@ -18,6 +18,9 @@ app.get('/health', (req, res) =>
   })
 );
 
+
+
+
 app.get('/api', (req, res) => {
   res.status(200).json({
     status: 'Tallie API is running',
@@ -36,5 +39,10 @@ app.get('/metrics', (req, res) => {
 app.use("/api/restaurants", restaurantRoutes);
 app.use("/api/reservations", reservationRoutes);
 app.use("/api/users", userRoutes);
+
+// after all route definitions
+app.use((req, res) => {
+  res.status(404).json({ error: "Route Not Found" });
+});
 
 export default app;
